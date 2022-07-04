@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RollBar", "RollBar\RollBar.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testf", "testf\testf.csproj", "{AB165FE6-E52A-4206-916F-F19BCDE113E6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileNameAvailable", "FileNameAvailable\FileNameAvailable.csproj", "{4456A3C4-EB7D-4500-B387-86A95197B080}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{AB165FE6-E52A-4206-916F-F19BCDE113E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB165FE6-E52A-4206-916F-F19BCDE113E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB165FE6-E52A-4206-916F-F19BCDE113E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4456A3C4-EB7D-4500-B387-86A95197B080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4456A3C4-EB7D-4500-B387-86A95197B080}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4456A3C4-EB7D-4500-B387-86A95197B080}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4456A3C4-EB7D-4500-B387-86A95197B080}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

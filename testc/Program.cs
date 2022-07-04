@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RenTY;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -15,6 +16,9 @@ namespace testc
 
             String a = RenTY.HASH16.GetHash("edmea");
             Console.WriteLine(a);
+
+            Console.WriteLine(FileNameAvailable.GetAvailable("d:\\1.txt", out Exception ex, true));
+            if (ex != null) Console.WriteLine(ex.Message);
             Console.ReadKey();
 
 
