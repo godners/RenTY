@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.button1 = new System.Windows.Forms.Button();
-            this.singleDirection1 = new RollBar.SingleDirection();
+            this.controlBar1 = new RenTY.ControlBar();
             this.SuspendLayout();
             // 
             // button1
@@ -42,23 +42,26 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // singleDirection1
+            // controlBar1
             // 
-            this.singleDirection1.Direction = RollBar.SingleDirection.DirectionType.LeftToRight;
-            this.singleDirection1.Enabled = false;
-            this.singleDirection1.Location = new System.Drawing.Point(74, 94);
-            this.singleDirection1.Margin = new System.Windows.Forms.Padding(4);
-            this.singleDirection1.Name = "singleDirection1";
-            this.singleDirection1.Size = new System.Drawing.Size(128, 16);
-            this.singleDirection1.TabIndex = 0;
+            this.controlBar1.AutoValidate = System.Windows.Forms.AutoValidate.EnablePreventFocusChange;
+            this.controlBar1.Enabled = false;
+            this.controlBar1.FlushPeriod = 100;
+            this.controlBar1.Location = new System.Drawing.Point(118, 97);
+            this.controlBar1.Name = "controlBar1";
+            this.controlBar1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.controlBar1.RollMode = RenTY.EnumRollBarMode.SingleDirection;
+            this.controlBar1.RollPeriod = 3000;
+            this.controlBar1.Size = new System.Drawing.Size(100, 16);
+            this.controlBar1.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.controlBar1);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.singleDirection1);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -67,8 +70,8 @@
 
         #endregion
 
-        private RollBar.SingleDirection singleDirection1;
         private System.Windows.Forms.Button button1;
+        private RenTY.ControlBar controlBar1;
     }
 }
 

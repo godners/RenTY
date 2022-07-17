@@ -4,9 +4,9 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{44CAA784-A2CA-4AEC-8817-0453A1DE2DA4}</ProjectGuid>
+    <ProjectGuid>{153F120A-61B9-4DDE-85D0-7A3F6E8DB8C1}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>RollBar</RootNamespace>
+    <RootNamespace>RenTY</RootNamespace>
     <AssemblyName>RollBar</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -43,18 +43,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="SingleDirection.cs">
+    <Compile Include="ControlBar.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SingleDirection.Designer.cs">
-      <DependentUpon>SingleDirection.cs</DependentUpon>
+    <Compile Include="ControlBar.Designer.cs">
+      <DependentUpon>ControlBar.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SingleDirection.resx">
-      <DependentUpon>SingleDirection.cs</DependentUpon>
+    <EmbeddedResource Include="ControlBar.resx">
+      <DependentUpon>ControlBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

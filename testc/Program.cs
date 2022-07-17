@@ -11,7 +11,7 @@ namespace testc
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void Main(/*string[] args*/)
         {
 
             String a = RenTY.HASH16.GetHash("edmea");
@@ -24,10 +24,10 @@ namespace testc
 
         }
 
-        static void a()
-        {
-            Console.WriteLine(888);
-            Thread.Sleep(5000);
-        }
+        //static void a()
+        //{
+        //    Console.WriteLine(888);
+        //    Thread.Sleep(5000);
+        //}
     }
 }

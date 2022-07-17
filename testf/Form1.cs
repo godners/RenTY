@@ -19,7 +19,7 @@ namespace testf
 
         private void button1_Click(object sender, EventArgs e)
         {
-            singleDirection1.Enabled = true;
+            controlBar1.Enabled = true;
         }
     }
 }
