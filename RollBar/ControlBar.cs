@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
 
 namespace RenTY
 {
@@ -76,7 +68,7 @@ namespace RenTY
         /// </summary>
         private void ParamFollow(object sender, EventArgs e)
         {
-            BarMain.Size = ((UserControl)sender).Size;            
+            BarMain.Size = ((UserControl)sender).Size;
             BarMain.ForeColor = ((UserControl)sender).ForeColor;
             BarMain.BackColor = ((UserControl)sender).BackColor;
             BarMain.Cursor = ((UserControl)sender).Cursor;
@@ -121,7 +113,7 @@ namespace RenTY
             {
                 case EnumRollBarMode.SingleDirection: SwitchStateSingle(); break;
                 case EnumRollBarMode.DoubleDirection: SwitchStateDouble(); break;
-                default:break;
+                default: break;
             }
         }
         /// <summary>
@@ -132,12 +124,12 @@ namespace RenTY
             switch (DirectionState)
             {
                 case EnumDirection.LeftToRight_Raise:
-                    DirectionState = EnumDirection.LeftToRight_Reduce; 
+                    DirectionState = EnumDirection.LeftToRight_Reduce;
                     BarMain.RightToLeft = RightToLeft.Yes; break;
                 case EnumDirection.LeftToRight_Reduce:
-                    DirectionState = EnumDirection.LeftToRight_Raise; 
+                    DirectionState = EnumDirection.LeftToRight_Raise;
                     BarMain.RightToLeft = RightToLeft.No; break;
-                default:break;
+                default: break;
             }
         }
         /// <summary>
@@ -147,17 +139,17 @@ namespace RenTY
         {
             switch (DirectionState)
             {
-                case EnumDirection.LeftToRight_Raise: 
-                    DirectionState = EnumDirection.LeftToRight_Reduce; 
+                case EnumDirection.LeftToRight_Raise:
+                    DirectionState = EnumDirection.LeftToRight_Reduce;
                     BarMain.RightToLeft = RightToLeft.Yes; break;
                 case EnumDirection.LeftToRight_Reduce:
-                    DirectionState = EnumDirection.RightToLeft_Raise; 
+                    DirectionState = EnumDirection.RightToLeft_Raise;
                     BarMain.RightToLeft = RightToLeft.Yes; break;
                 case EnumDirection.RightToLeft_Raise:
-                    DirectionState = EnumDirection.RightToLeft_Reduce; 
+                    DirectionState = EnumDirection.RightToLeft_Reduce;
                     BarMain.RightToLeft = RightToLeft.No; break;
                 case EnumDirection.RightToLeft_Reduce:
-                    DirectionState = EnumDirection.LeftToRight_Raise; 
+                    DirectionState = EnumDirection.LeftToRight_Raise;
                     BarMain.RightToLeft = RightToLeft.No; break;
                 default: break;
             }
@@ -179,6 +171,7 @@ namespace RenTY
                 default: return false;
             }
         }
+        #region Sub-Region 计算步长
         /// <summary>
         /// 单次步长
         /// </summary>
@@ -193,14 +186,12 @@ namespace RenTY
             {
                 case EnumDirection.LeftToRight_Raise: return 1;
                 case EnumDirection.LeftToRight_Reduce: return -1;
-                case EnumDirection.RightToLeft_Raise: return 1;                
+                case EnumDirection.RightToLeft_Raise: return 1;
                 case EnumDirection.RightToLeft_Reduce: return -1;
                 default: return 0;
             }
         }
-
-
-
+        #endregion
         #endregion
     }
     /// <summary>
@@ -217,6 +208,4 @@ namespace RenTY
         /// </summary>
         DoubleDirection = 1
     }
-
-
 }
