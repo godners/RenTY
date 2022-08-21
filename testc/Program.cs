@@ -14,11 +14,17 @@ namespace testc
         static void Main(/*string[] args*/)
         {
 
-            String a = RenTY.HASH16.GetHash("edmea");
-            Console.WriteLine(a);
+            //String a = RenTY.HASH16.GetHash("edmea");
+            //Console.WriteLine(a);
 
-            Console.WriteLine(FileNameAvailable.GetAvailable("d:\\1.txt", out Exception ex, true));
-            if (ex != null) Console.WriteLine(ex.Message);
+            //Console.WriteLine(FileNameAvailable.GetAvailable("d:\\1.txt", out Exception ex, true));
+            //if (ex != null) Console.WriteLine(ex.Message);
+            //BarMain.Value + StepLength() > BarMain.Maximum;
+
+            Debug.WriteLine(10 + 2 > 5);
+            Debug.WriteLine(-10 + 3 > 2);
+
+
             Console.ReadKey();
 
 
